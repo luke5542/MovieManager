@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieManager</string>
+    <string name="movies_title">Movies</string>
+    <string name="add_movie_title">Add Movie</string>
+    <string name="fab_add_movie">Add Movie</string>
+    <string name="stock_quanitity_label">Stock: %s</string>
+    <string name="rented_quanitity_label">Rented: %s</string>
+</resources>
