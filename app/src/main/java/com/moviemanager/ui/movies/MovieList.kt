@@ -168,12 +168,12 @@ private fun MovieItem(movie: Movie) {
             }
         )
         Text(
-            text = stringResource(R.string.stock_quanitity_label, movie.totalStock),
+            text = stringResource(R.string.rented_quanitity_label, movie.rentedStock),
             style = MaterialTheme.typography.labelSmall,
-            modifier = Modifier.constrainAs(stockText) {
+            modifier = Modifier.constrainAs(rentedText) {
                 end.linkTo(parent.end, 16.dp)
                 top.linkTo(parent.top, 16.dp)
-                bottom.linkTo(divider.bottom, 8.dp)
+                bottom.linkTo(divider.top, 8.dp)
             }
         )
         Divider(
@@ -183,15 +183,15 @@ private fun MovieItem(movie: Movie) {
                 .constrainAs(divider) {
                     width = Dimension.fillToConstraints
                     start.linkTo(barrier)
-                    end.linkTo(stockText.end)
-                    top.linkTo(stockText.bottom)
-                    bottom.linkTo(rentedText.top)
+                    end.linkTo(rentedText.end)
+                    top.linkTo(rentedText.bottom)
+                    bottom.linkTo(stockText.top)
                 }
         )
         Text(
-            text = stringResource(R.string.rented_quanitity_label, movie.rentedStock),
+            text = stringResource(R.string.stock_quanitity_label, movie.totalStock),
             style = MaterialTheme.typography.labelSmall,
-            modifier = Modifier.constrainAs(rentedText) {
+            modifier = Modifier.constrainAs(stockText) {
                 end.linkTo(parent.end, 16.dp)
                 top.linkTo(divider.bottom, 8.dp)
             }
